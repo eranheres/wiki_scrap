@@ -31,7 +31,7 @@ def download_image(image_name, url):
 
 
 category = 'Category:Best_Actor_Academy_Award_winners'
-category = 'קטגוריה:כתבים_מדיניים_ישראלים'
+category = 'קטגוריה:שרי ממשלת ישראל ה-35'
 results = get_category_pages(category)
 for result in results:
     print(result)
