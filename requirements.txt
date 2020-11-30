@@ -1,2 +1,4 @@
 wptools
 requests
+pytrends
+progressbar2
