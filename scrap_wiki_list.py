@@ -101,8 +101,8 @@ def update_popularity(folder):
                 if count % 10 == 0:
                     save_info(info=titles, folder=folder)
             except:
-                time.sleep(5*60)
                 print("failed to load {}".format(str(kw_list)))
+                time.sleep(5*60)
             kw_list = ['בר רפאלי']
 
 
