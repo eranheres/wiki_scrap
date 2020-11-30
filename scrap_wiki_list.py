@@ -81,7 +81,7 @@ def save_info(info, folder):
 import logging
 
 def update_popularity(folder):
-    pytrends = TrendReq(hl='en-US', tz=360, timeout=5, retries=30, backoff_factor=0.5)
+    pytrends = TrendReq(hl='en-US', tz=360, timeout=5, retries=30, backoff_factor=10)
     titles = info_from_file(folder)
     count = 0
     kw_list = ['בר רפאלי']
@@ -101,7 +101,7 @@ def update_popularity(folder):
                 if count % 10 == 0:
                     save_info(info=titles, folder=folder)
             except:
-                d = pytrends.results()
+                time.sleep(5*60)
                 print("failed to load {}".format(str(kw_list)))
             kw_list = ['בר רפאלי']
 
