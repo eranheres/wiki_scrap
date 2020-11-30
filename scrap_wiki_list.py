@@ -98,11 +98,11 @@ def update_popularity(folder):
                 pytrends.build_payload(kw_list, timeframe='today 5-y')
                 ds = pytrends.interest_over_time()
                 title['popularity'] = int(ds[title_name].sum())
+                if count % 10 == 0:
+                    save_info(info=titles, folder=folder)
             except:
                 d = pytrends.results()
                 print("failed to load {}".format(str(kw_list)))
-            if count % 10 == 0:
-                save_info(info=titles, folder=folder)
             kw_list = ['בר רפאלי']
 
 
